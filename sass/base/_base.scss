@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 0px black solid;
+  font-size: 2rem;
+  font-family: Roboto;
 }
 
 html {
@@ -11,4 +14,17 @@ html {
 
 body {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.logo {
+  font-family: Shrikhand;
 }
