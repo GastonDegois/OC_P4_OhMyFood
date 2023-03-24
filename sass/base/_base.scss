@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0px black solid;
+  border: px black solid;
   font-size: 2rem;
   font-family: Roboto;
 }
@@ -10,9 +10,16 @@
 html {
   // 10px div by def of 16px
   font-size: 62.5%;
+  max-width: 1400px;
+  min-width: 320px;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 body {
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -23,6 +30,10 @@ a {
 
 li {
   list-style-type: none;
+}
+
+.main {
+  padding-top: $header-height;
 }
 
 .logo {
