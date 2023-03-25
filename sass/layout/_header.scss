@@ -2,12 +2,21 @@
   display: flex;
   justify-content: center;
   position: absolute;
+  align-items: flex-end;
   width: 100%;
   height: $header-height;
   box-shadow: 0 0.1rem 0.7rem rgb(169, 169, 169);
+  @include desktop-only {
+    height: $desktop-header-height;
+    align-items: center;
+  }
 
   &__logo {
     height: 3.5rem;
-    margin-top: 3rem;
+    margin-bottom: 1rem;
+    @include desktop-only {
+      margin: 0;
+      height: 4rem;
+    }
   }
 }

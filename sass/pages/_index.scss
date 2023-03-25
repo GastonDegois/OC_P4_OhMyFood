@@ -6,11 +6,17 @@
   align-items: center;
 
   padding-bottom: 6rem;
+
   @include grey-background;
+
   &__heading {
     margin: 5rem 8% 0 8%;
     font-size: 3rem;
     text-align: center;
+    @include desktop-only {
+      font-size: 4.3rem;
+      margin-bottom: 2rem;
+    }
   }
   &__p {
     text-align: center;
@@ -48,8 +54,24 @@
 
 .explanations {
   padding: 5rem 2rem 4rem 2rem;
+  @include tablet-only {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  @include desktop-only {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+
   &__heading {
     margin-bottom: 2rem;
+  }
+  &__steps-container {
+    @include desktop-only {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -61,12 +83,16 @@
   border-radius: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
+  padding-right: 2rem;
   @include grey-background;
 
   @include card-shadow;
 
   &--colored {
     background-color: lighten($colour-secondary, 20%);
+  }
+  @include desktop-only {
+    width: 30.5%;
   }
 
   &__number {
@@ -92,7 +118,7 @@
   }
   &__text {
     padding-left: 3rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
   }
 }
@@ -104,6 +130,11 @@
   @include grey-background;
   padding: 6rem 2.2rem 5.5rem 2.2rem;
 
+  @include desktop-only {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+
   &__heading {
     margin-bottom: 3rem;
   }
@@ -111,16 +142,38 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+
+    @include tablet-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include desktop-only {
+      row-gap: 4rem;
+    }
   }
 }
 
 .restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   border-radius: 2rem;
   background-color: white;
 
   @include card-shadow;
+
+  @include tablet-only {
+    width: 48%;
+    aspect-ratio: 6.3/4;
+  }
+
+  @include desktop-only {
+    width: 48%;
+  }
 
   &__new {
     position: absolute;
@@ -144,24 +197,42 @@
     &--bottom-position {
       object-position: bottom;
     }
+
+    @include tablet-only {
+      height: auto;
+      aspect-ratio: 4.5/2;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    margin: 1.2rem 3rem 1.2rem 1.5rem;
+    align-items: center;
+    margin: auto 6% 1.2rem 4%;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+
+    @include desktop-only {
+      font-size: 2.2rem;
+    }
   }
 
   &__text {
     margin-top: 0.3rem;
     font-weight: 300;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
+
+    @include desktop-only {
+      font-size: 1.9rem;
+    }
   }
 
   &__favorite {
     color: rgb(196, 196, 196);
     padding-left: 0.1rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
 
     &:hover {
       background: linear-gradient($colour-primary 0%, $colour-secondary 60%);

@@ -1,44 +1,4 @@
 /* UTILS */
-/*
-@mixin heading-shadow($colour: lightness-shift($colour-primary), $offset: $heading-shadow-size) {
-  text-shadow: $offset $offset $colour;
-}
-
-@mixin border($colour: $colour-primary) {
-  border: 0.1rem solid $colour;
-}
-
-@mixin img-ratio {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-  & img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@mixin btn {
-  padding: $grid-gutter;
-  @include border;
-  color: $colour-primary;
-  background: $colour-secondary;
-  cursor: pointer;
-  &:hover {
-    background: $colour-primary;
-    color: $colour-accent;
-  }
-  &--full-width {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-*/
 /* BASE */
 * {
   margin: 0;
@@ -53,6 +13,16 @@ html {
   font-size: 62.5%;
   max-width: 1400px;
   min-width: 320px;
+}
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
 }
 
 h2 {
@@ -75,6 +45,11 @@ li {
 
 .main {
   padding-top: 8rem;
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    padding-top: 12rem;
+  }
 }
 
 .logo {
@@ -104,19 +79,40 @@ li {
   display: flex;
   justify-content: center;
   position: absolute;
+  align-items: flex-end;
   width: 100%;
   height: 8rem;
   box-shadow: 0 0.1rem 0.7rem rgb(169, 169, 169);
 }
+@media screen and (min-width: 1000px) {
+  .header {
+    height: 12rem;
+    align-items: center;
+  }
+}
 .header__logo {
   height: 3.5rem;
-  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .header__logo {
+    margin: 0;
+    height: 4rem;
+  }
 }
 
 .footer {
-  padding: 2rem 0 5rem 2rem;
+  padding: 2rem 2rem 5rem 2rem;
   background-color: rgb(63, 63, 63);
   color: white;
+}
+@media screen and (min-width: 1000px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5rem 10rem 4rem 5rem;
+  }
 }
 .footer * {
   color: white;
@@ -127,13 +123,38 @@ li {
   margin-top: 2rem;
   row-gap: 1rem;
 }
+@media screen and (min-width: 700px) {
+  .footer__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .footer__list {
+    justify-content: space-between;
+    margin-top: 0;
+    margin-right: 5rem;
+    column-gap: 3rem;
+  }
+}
 .footer__links {
   font-size: 1.7rem;
   font-weight: 500;
 }
+@media screen and (min-width: 700px) {
+  .footer__links {
+    font-size: 1.5rem;
+  }
+}
 .footer__icons {
   font-size: 1.5rem;
   margin-right: 0.8rem;
+}
+@media screen and (min-width: 700px) {
+  .footer__icons {
+    margin-right: 0.6rem;
+    font-size: 1.4rem;
+  }
 }
 
 /* PAGES */
@@ -149,6 +170,12 @@ li {
   margin: 5rem 8% 0 8%;
   font-size: 3rem;
   text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .booking-form__heading {
+    font-size: 4.3rem;
+    margin-bottom: 2rem;
+  }
 }
 .booking-form__p {
   text-align: center;
@@ -186,8 +213,26 @@ li {
 .explanations {
   padding: 5rem 2rem 4rem 2rem;
 }
+@media screen and (min-width: 700px) {
+  .explanations {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .explanations {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+}
 .explanations__heading {
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .explanations__steps-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .explanation-step {
@@ -198,11 +243,17 @@ li {
   border-radius: 2rem;
   margin-left: 2rem;
   margin-bottom: 3rem;
+  padding-right: 2rem;
   background-color: rgb(245, 245, 245);
   box-shadow: 0 0.7rem 2rem rgb(212, 212, 212);
 }
 .explanation-step--colored {
   background-color: #ffdff6;
+}
+@media screen and (min-width: 1000px) {
+  .explanation-step {
+    width: 30.5%;
+  }
 }
 .explanation-step__number {
   display: flex;
@@ -227,7 +278,7 @@ li {
 }
 .explanation-step__text {
   padding-left: 3rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -237,6 +288,12 @@ li {
   background-color: rgb(245, 245, 245);
   padding: 6rem 2.2rem 5.5rem 2.2rem;
 }
+@media screen and (min-width: 1000px) {
+  .restaurants-section {
+    padding-left: 9.5%;
+    padding-right: 9.5%;
+  }
+}
 .restaurants-section__heading {
   margin-bottom: 3rem;
 }
@@ -245,13 +302,39 @@ li {
   flex-direction: column;
   row-gap: 2rem;
 }
+@media screen and (min-width: 700px) {
+  .restaurants-section__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurants-section__grid {
+    row-gap: 4rem;
+  }
+}
 
 .restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   border-radius: 2rem;
   background-color: white;
   box-shadow: 0 0.7rem 2rem rgb(212, 212, 212);
+}
+@media screen and (min-width: 700px) {
+  .restaurant-card {
+    width: 48%;
+    aspect-ratio: 6.3/4;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurant-card {
+    width: 48%;
+  }
 }
 .restaurant-card__new {
   position: absolute;
@@ -274,20 +357,40 @@ li {
 .restaurant-card__image--bottom-position {
   object-position: bottom;
 }
+@media screen and (min-width: 700px) {
+  .restaurant-card__image {
+    height: auto;
+    aspect-ratio: 4.5/2;
+  }
+}
 .restaurant-card__content {
   display: flex;
   justify-content: space-between;
-  margin: 1.2rem 3rem 1.2rem 1.5rem;
+  align-items: center;
+  margin: auto 6% 1.2rem 4%;
+}
+.restaurant-card__heading {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 1000px) {
+  .restaurant-card__heading {
+    font-size: 2.2rem;
+  }
 }
 .restaurant-card__text {
   margin-top: 0.3rem;
   font-weight: 300;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
+}
+@media screen and (min-width: 1000px) {
+  .restaurant-card__text {
+    font-size: 1.9rem;
+  }
 }
 .restaurant-card__favorite {
   color: rgb(196, 196, 196);
   padding-left: 0.1rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .restaurant-card__favorite:hover {
   background: linear-gradient(#9356dc 0%, #ff79da 60%);

@@ -12,8 +12,14 @@ html {
   font-size: 62.5%;
   max-width: 1400px;
   min-width: 320px;
-}
 
+  @include tablet-only {
+    font-size: 70%;
+  }
+  @include desktop-only {
+    font-size: 55%;
+  }
+}
 h2 {
   font-size: 3rem;
 }
@@ -34,6 +40,10 @@ li {
 
 .main {
   padding-top: $header-height;
+
+  @include desktop-only {
+    padding-top: $desktop-header-height;
+  }
 }
 
 .logo {
