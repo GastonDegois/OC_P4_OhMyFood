@@ -6,6 +6,10 @@
   box-shadow: 0 0.7rem 2rem rgb(212, 212, 212);
 }
 
+@mixin card-shadow--hover() {
+  box-shadow: 0 0.1rem 2rem rgb(172, 172, 172);
+}
+
 @mixin tablet-only {
   @media screen and (min-width: map-get($breakpoints, tablet)) {
     @content;

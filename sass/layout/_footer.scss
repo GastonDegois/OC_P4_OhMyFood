@@ -19,6 +19,15 @@
     margin-top: 2rem;
     row-gap: 1rem;
 
+    &-item {
+      & * {
+        transition: color 0.3s;
+      }
+      &:hover * {
+        color: rgb(181, 181, 181);
+      }
+    }
+
     @include tablet-only {
       flex-direction: row;
       column-gap: 3rem;

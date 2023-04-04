@@ -1,11 +1,13 @@
 .header {
+  position: relative;
+  background-color: white;
   display: flex;
   justify-content: center;
-  position: absolute;
   align-items: flex-end;
   width: 100%;
   height: $header-height;
   box-shadow: 0 0.1rem 0.7rem rgb(169, 169, 169);
+  z-index: 2;
   @include desktop-only {
     height: $desktop-header-height;
     align-items: center;

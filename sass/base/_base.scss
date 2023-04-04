@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: px black solid;
+  border: 0px black solid;
   font-size: 2rem;
   font-family: Roboto;
+  z-index: auto;
 }
 
 html {
@@ -12,7 +13,7 @@ html {
   font-size: 62.5%;
   max-width: 1400px;
   min-width: 320px;
-
+  margin: auto;
   @include tablet-only {
     font-size: 70%;
   }
@@ -29,6 +30,10 @@ body {
   box-sizing: border-box;
 }
 
+.main {
+  z-index: 1;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -36,14 +41,6 @@ a {
 
 li {
   list-style-type: none;
-}
-
-.main {
-  padding-top: $header-height;
-
-  @include desktop-only {
-    padding-top: $desktop-header-height;
-  }
 }
 
 .logo {
