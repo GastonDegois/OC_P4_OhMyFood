@@ -1,3 +1,5 @@
+/* MAIN */
+
 .restaurant-main {
   display: flex;
   flex-direction: column;
@@ -37,6 +39,8 @@
   }
 }
 
+/* MENUS */
+
 .menu-step {
   &__heading {
     animation: menu-step $menu-step-duration backwards;
@@ -52,22 +56,7 @@
   }
 }
 
-.menu-step {
-  @for $i from 0 through 2 {
-    &:nth-child(#{$i + 2}) {
-      & h2 {
-        animation-delay: $animation-delay * $i;
-      }
-      & .dish {
-        @for $i2 from 1 through 4 {
-          &:nth-child(#{$i2}) {
-            animation-delay: $dishes-delay + $i2 * $dish-delay + $animation-delay * $i;
-          }
-        }
-      }
-    }
-  }
-}
+/* MENUS - dishes */
 
 .dish-list {
   display: flex;
@@ -129,6 +118,8 @@
   }
 }
 
+/* ANIMATIONS - choose */
+
 .dish:hover {
   & .dish__left-content {
     width: 70%;
@@ -138,6 +129,25 @@
     width: 6rem;
     & i {
       transform: scale(1);
+    }
+  }
+}
+
+/* ANIMATIONS - menus */
+
+.menu-step {
+  @for $i from 0 through 2 {
+    &:nth-child(#{$i + 2}) {
+      & h2 {
+        animation-delay: $animation-delay * $i;
+      }
+      & .dish {
+        @for $i2 from 1 through 4 {
+          &:nth-child(#{$i2}) {
+            animation-delay: $dishes-delay + $i2 * $dish-delay + $animation-delay * $i;
+          }
+        }
+      }
     }
   }
 }

@@ -1,14 +1,4 @@
-@mixin grey-background() {
-  background-color: $colour-light-grey;
-}
-
-@mixin card-shadow() {
-  box-shadow: 0 0.7rem 2rem rgb(212, 212, 212);
-}
-
-@mixin card-shadow--hover() {
-  box-shadow: 0 0.1rem 2rem rgb(172, 172, 172);
-}
+/* BREAKPOINTS */
 
 @mixin tablet-only {
   @media screen and (min-width: map-get($breakpoints, tablet)) {
@@ -22,6 +12,31 @@
   }
 }
 
+/* SHADOWS */
+
+@mixin card-shadow() {
+  box-shadow: 0 0.7rem 2rem rgb(212, 212, 212);
+}
+
+@mixin card-shadow--hover() {
+  box-shadow: 0 0.1rem 2rem rgb(172, 172, 172);
+}
+
+/* BACKGROUNDS */
+
+@mixin grey-background() {
+  background-color: $colour-light-grey;
+}
+
+/* PADDINGS */
+
+@mixin padding-left-right($p) {
+  padding-left: $p;
+  padding-right: $p;
+}
+
+/* OTHERS */
+
 @mixin menu-step-heading {
   font-size: 2rem;
   font-weight: 300;
@@ -31,9 +46,4 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-@mixin padding-left-right($p) {
-  padding-left: $p;
-  padding-right: $p;
 }

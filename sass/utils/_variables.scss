@@ -1,13 +1,16 @@
+/* COLOURS */
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-light-grey: rgb(245, 245, 245);
 
+/* BREAKPOINTS */
 $breakpoints: (
   tablet: 700px,
   desktop: 1000px,
 );
 
+/* ANIMATIONS DURATIONS AND DELAYS */
 $menu-step-duration: 1s;
 $dish-duration: 0.7s;
 $dish-delay: 0.1s;

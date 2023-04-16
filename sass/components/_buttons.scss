@@ -1,3 +1,5 @@
+/* PRIMARY BUTTONS */
+
 .btn {
   display: flex;
   justify-content: center;
@@ -47,6 +49,8 @@
   }
 }
 
+/* FAVORITE BUTTON */
+
 .btn-favorite {
   position: relative;
   height: 3rem;
@@ -89,5 +93,3 @@
     transform: scaleY(1);
   }
 }
-
-/* linear-gradient(darken($colour-secondary, 10%), $colour-primary 90%); */
