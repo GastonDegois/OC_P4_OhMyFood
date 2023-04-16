@@ -2,17 +2,14 @@ $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
 $colour-light-grey: rgb(245, 245, 245);
-$colour-white: #fff;
-$colour-invalid: #db464b;
-
-$heading-shadow-size: 0.55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * 0.25;
-
-$header-height: 8rem;
-$desktop-header-height: 12rem;
 
 $breakpoints: (
   tablet: 700px,
   desktop: 1000px,
 );
+
+$menu-step-duration: 1s;
+$dish-duration: 0.7s;
+$dish-delay: 0.1s;
+$dishes-delay: $menu-step-duration * 0.8;
+$animation-delay: ($menu-step-duration + $dish-duration + $dish-delay * 3);

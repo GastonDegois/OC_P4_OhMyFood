@@ -1,4 +1,8 @@
 .btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: fit-content;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -35,6 +39,11 @@
     background: linear-gradient(lighten($colour-secondary, 6%) 0%, lighten($colour-primary, 6%) 60%);
     opacity: 0;
     transition: opacity 0.5s;
+  }
+
+  &--order {
+    padding-left: 7rem;
+    padding-right: 7rem;
   }
 }
 

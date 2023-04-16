@@ -21,3 +21,14 @@
     @content;
   }
 }
+
+@mixin menu-step-heading {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+@mixin ellipsis-when-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

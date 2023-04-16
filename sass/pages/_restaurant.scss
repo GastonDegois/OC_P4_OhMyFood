@@ -1,0 +1,128 @@
+.restaurant-main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  z-index: 2;
+  border-radius: 4rem 4rem 0 0;
+  margin-top: -5rem;
+  padding: 3.5rem 1.5rem 5rem 1.5rem;
+  background-color: $colour-light-grey;
+  width: 100%;
+
+  &__heading-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+  }
+
+  &__heading {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+  }
+}
+
+.menu-step {
+  &__heading {
+    animation: menu-step $menu-step-duration backwards;
+    width: fit-content;
+    margin-bottom: 2rem;
+    @include menu-step-heading;
+
+    &--underlined {
+      padding-bottom: 0.4rem;
+      border-bottom: rgb(202, 202, 202) solid 0.35rem;
+      @include menu-step-heading;
+    }
+  }
+}
+
+.menu-step {
+  @for $i from 0 through 2 {
+    &:nth-child(#{$i + 2}) {
+      & h2 {
+        animation-delay: $animation-delay * $i;
+      }
+      & .dish {
+        @for $i2 from 1 through 4 {
+          &:nth-child(#{$i2}) {
+            animation-delay: $dishes-delay + $i2 * $dish-delay + $animation-delay * $i;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dish-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4rem;
+}
+
+.dish {
+  animation: dish $dish-duration backwards;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  @include card-shadow;
+
+  &__left-content {
+    flex: 1;
+    margin: 1.5rem 1.2rem 1.5rem 1.2rem;
+    overflow: hidden;
+    width: 80%;
+  }
+  &__name {
+    margin-bottom: 0.3rem;
+    @include ellipsis-when-overflow;
+  }
+  &__side {
+    font-size: 1.7rem;
+    font-weight: 300;
+    @include ellipsis-when-overflow;
+  }
+  &__right-content {
+    display: flex;
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  &__choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colour-tertiary;
+    color: white;
+    height: 100%;
+    width: 0rem;
+    transition: 0.5s;
+    & i {
+      transform: scale(0);
+      transition: 0.5s;
+      transition-delay: 0.05s;
+    }
+  }
+}
+
+.dish:hover {
+  & .dish__left-content {
+    width: 70%;
+  }
+
+  & .dish__choose {
+    width: 6rem;
+    & i {
+      transform: scale(1);
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+@import "./utils/keyframes";
 
 /* BASE */
 
@@ -23,3 +24,4 @@
 /* PAGES */
 
 @import "./pages/index";
+@import "./pages/restaurant";
