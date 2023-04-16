@@ -16,3 +16,4 @@ $dish-duration: 0.7s;
 $dish-delay: 0.1s;
 $dishes-delay: $menu-step-duration * 0.6;
 $animation-delay: ($dishes-delay + $dish-duration + $dish-delay * 3);
+$loader-duration: 4s;

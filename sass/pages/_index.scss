@@ -2,6 +2,55 @@
   z-index: 1;
 }
 
+/* LOADER */
+
+.loader-screen {
+  transform: scale(0);
+  animation: show-white-screen $loader-duration;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: lighten($colour-secondary, 25%);
+  z-index: 5;
+}
+
+.loader {
+  position: absolute;
+  z-index: 6;
+  transform: scale(0);
+  animation: show-loader $loader-duration;
+  margin: auto;
+  left: calc(50% - 125px);
+  margin-top: 20rem;
+  width: 250px;
+  height: 250px;
+  @include desktop-only {
+    margin-top: 35rem;
+  }
+  & div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 100%;
+    & i {
+      transform: scale(0);
+      animation: loader 2s infinite;
+      color: $colour-primary;
+    }
+  }
+  @for $i from 1 through 20 {
+    & div:nth-child(#{$i}) {
+      transform: rotate(calc(18deg * ($i - 1)));
+      & i {
+        animation-delay: calc(0.1s * $i);
+      }
+    }
+  }
+}
+
 /* BOOKING SECTION - formular */
 
 .booking-form {
