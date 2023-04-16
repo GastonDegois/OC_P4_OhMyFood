@@ -57,8 +57,11 @@ h2 {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: relative;
   box-sizing: border-box;
+  z-index: -2;
 }
 
 a {
@@ -113,8 +116,8 @@ li {
   transition: opacity 0.5s;
 }
 .btn--order {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .btn-favorite {
@@ -187,7 +190,7 @@ li {
 }
 @media screen and (min-width: 1000px) {
   .header__logo {
-    margin: 0;
+    margin-bottom: 3rem;
     height: 4rem;
   }
 }
@@ -196,11 +199,21 @@ li {
   width: 100%;
   object-fit: cover;
 }
+@media screen and (min-width: 1000px) {
+  .header__picture {
+    height: 45rem;
+  }
+}
 
 .nav {
   position: absolute;
   top: 3rem;
   left: 3rem;
+}
+@media screen and (min-width: 1000px) {
+  .nav {
+    top: 4rem;
+  }
 }
 
 .footer {
@@ -523,15 +536,38 @@ li {
   background-color: rgb(245, 245, 245);
   width: 100%;
 }
+@media screen and (min-width: 700px) {
+  .restaurant-main {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurant-main {
+    width: 75%;
+    align-self: center;
+    margin-top: -8rem;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 .restaurant-main__heading-container {
   display: flex;
   justify-content: space-between;
   padding-right: 2rem;
 }
+@media screen and (min-width: 700px) {
+  .restaurant-main__heading-container {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+}
 .restaurant-main__heading {
   font-family: "Shrikhand", sans-serif;
   font-size: 2.7rem;
   font-weight: 400;
+  margin-right: 2rem;
 }
 
 .menu-step__heading {
@@ -552,46 +588,46 @@ li {
   animation-delay: 0s;
 }
 .menu-step:nth-child(2) .dish:nth-child(1) {
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 .menu-step:nth-child(2) .dish:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 .menu-step:nth-child(2) .dish:nth-child(3) {
-  animation-delay: 1.1s;
+  animation-delay: 0.9s;
 }
 .menu-step:nth-child(2) .dish:nth-child(4) {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 }
 .menu-step:nth-child(3) h2 {
-  animation-delay: 2s;
+  animation-delay: 1.6s;
 }
 .menu-step:nth-child(3) .dish:nth-child(1) {
-  animation-delay: 2.9s;
+  animation-delay: 2.3s;
 }
 .menu-step:nth-child(3) .dish:nth-child(2) {
-  animation-delay: 3s;
+  animation-delay: 2.4s;
 }
 .menu-step:nth-child(3) .dish:nth-child(3) {
-  animation-delay: 3.1s;
+  animation-delay: 2.5s;
 }
 .menu-step:nth-child(3) .dish:nth-child(4) {
-  animation-delay: 3.2s;
+  animation-delay: 2.6s;
 }
 .menu-step:nth-child(4) h2 {
-  animation-delay: 4s;
+  animation-delay: 3.2s;
 }
 .menu-step:nth-child(4) .dish:nth-child(1) {
-  animation-delay: 4.9s;
+  animation-delay: 3.9s;
 }
 .menu-step:nth-child(4) .dish:nth-child(2) {
-  animation-delay: 5s;
+  animation-delay: 4s;
 }
 .menu-step:nth-child(4) .dish:nth-child(3) {
-  animation-delay: 5.1s;
+  animation-delay: 4.1s;
 }
 .menu-step:nth-child(4) .dish:nth-child(4) {
-  animation-delay: 5.2s;
+  animation-delay: 4.2s;
 }
 
 .dish-list {

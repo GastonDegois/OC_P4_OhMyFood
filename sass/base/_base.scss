@@ -26,8 +26,11 @@ h2 {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   position: relative;
   box-sizing: border-box;
+  z-index: -2;
 }
 
 a {

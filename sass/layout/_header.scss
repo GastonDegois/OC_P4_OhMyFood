@@ -23,7 +23,7 @@
     margin-bottom: 1rem;
     margin-top: 3rem;
     @include desktop-only {
-      margin: 0;
+      margin-bottom: 3rem;
       height: 4rem;
     }
   }
@@ -31,6 +31,9 @@
     height: 25rem;
     width: 100%;
     object-fit: cover;
+    @include desktop-only {
+      height: 45rem;
+    }
   }
 }
 
@@ -38,4 +41,7 @@
   position: absolute;
   top: 3rem;
   left: 3rem;
+  @include desktop-only {
+    top: 4rem;
+  }
 }
