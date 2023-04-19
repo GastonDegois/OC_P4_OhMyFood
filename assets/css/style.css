@@ -66,6 +66,9 @@
   60% {
     opacity: 1;
   }
+  90% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
     transform: scale(1);
@@ -259,6 +262,10 @@ li {
   position: absolute;
   top: 3rem;
   left: 3rem;
+  transition: all 0.5s;
+}
+.nav:hover {
+  transform: rotate(-1turn);
 }
 @media screen and (min-width: 1000px) {
   .nav {
@@ -336,7 +343,7 @@ li {
 /* LOADER */
 .loader-screen {
   transform: scale(0);
-  animation: show-white-screen 4s;
+  animation: show-white-screen 5s;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -350,7 +357,7 @@ li {
   position: absolute;
   z-index: 6;
   transform: scale(0);
-  animation: show-loader 4s;
+  animation: show-loader 5s;
   margin: auto;
   left: calc(50% - 125px);
   margin-top: 20rem;
@@ -532,7 +539,7 @@ li {
   margin-right: 1.2rem;
 }
 .location__input {
-  width: fit-contents;
+  width: fit-content;
   border: none;
   background-color: transparent;
   font-size: 2rem;
